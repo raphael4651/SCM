@@ -1,0 +1,125 @@
+프로젝트 생성
+day0706
+
+p161 response01.jsp
+p162 response01_process.jsp
+p163 response01_success.jsp
+     response01_failed.jsp	
+
+1.header.jsp
+크롬 검색창에 부트스트랩 4.6
+
+2.footer.jsp
+
+3.main.jsp
+
+4.response01.jsp 수정
+  response01_process.jsp 수정
+   
+
+5.join.jsp (회원가입)
+
+아이디:
+비밀번호:
+이름:
+연락처:
+이메일:
+
+회원가입
+
+
+6.logout.jsp 작성
+
+
+
+day0630
+lib 폴더에 있는 taglib 3개를
+day0706 lib 폴더에 복사
+
+
+
+
+
+
+
+
+p165 header 정보 수정하기
+
+headerExample.jsp
+
+p170 out02.jsp
+p171 out02_process.jsp
+
+jspStudy > 자료실 > 회원가입.jpg
+memberjoin.jsp
+전화번호는 input 태그 1개 사용
+
+
+완료버튼 -> 회원가입
+memberjoinProcess.jsp
+
+이름:XXX
+성별:남자(여자)
+아이디:XXXX 비밀번호:XXXX
+주소:
+이메일:test@naver.com
+전화번호:010-1111-2222
+취미 : 게임 기타
+자기소개:XXXXX
+
+
+우편번호 api 검색
+
+
+
+
+p173
+WebMarket 프로젝트에 코딩
+ProductRepository.java 수정
+
+p174
+products.jsp 수정
+
+
+http://localhost:8080/WebMarket/product.jsp?id=P1234
+
+
+
+
+p174
+product.jsp 코딩
+
+
+products.jsp 실행
+
+
+
+p176 welcome.jsp 수정
+
+
+p190 
+day0706 프로젝트에 코딩
+
+selectExample.jsp 코딩
+
+memberjoin.jsp 수정
+
+p194  hobbyForm.jsp
+p195  hobbyFormProcess.jsp
+만약 운동,영화를 선택하면 
+선택하신 취미는 운동,영화 입니다. 라고 출력
+
+memberJoin.jsp 
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,44 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function checkValue(){
+		String sno = document.getElementById("sno").value;
+		String sname = document.getElementById("sname").value;
+		String kor = document.getElementById("kor").value;
+		String eng = document.getElementById("eng").value;
+		String math = document.getElementById("math").value;
+		
+		if(!sno){
+			alert("학생번호를 확인하세요!");
+		}
+		if(!sname){
+			alert("학생번호를 확인하세요!");
+		}
+		if(!kor){
+			alert("학생번호를 확인하세요!");
+		}
+		if(!eng){
+			alert("학생번호를 확인하세요!");
+		}
+		if(!math){
+			alert("학생번호를 확인하세요!");
+		}
+	}
+</script>
+</head>
+<body>
+	<form id="frm" action="score2_process.jsp" method="post">
+		<p> 학생번호 : <input type="text" id="sno" name="sno">
+		<p> 학생이름 : <input type="text" id="sname" name="sname">
+		<p> 국어 : <input type="text" id="kor" name="kor">
+		<p> 영어 : <input type="text" id="eng" name="eng">
+		<p> 수학 : <input type="text" id="math" name="math">
+		<p><input type="button" value="전송" onclick="checkValue()">
+	</form>
+</body>
+</html>

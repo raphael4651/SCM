@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>WebMarket</display-name>
+
+ <!-- 한글처리 필터 선언 -->
+ <filter>
+  	<filter-name>Set Character Encoding</filter-name>
+  	<filter-class>
+  		org.apache.catalina.filters.SetCharacterEncodingFilter
+  	</filter-class>
+  	<!-- web.xml에 초기값을 선언 -->
+  	<init-param>
+  		<param-name>encoding</param-name>
+  		<param-value>UTF-8</param-value>
+  	</init-param>
+  </filter>
+  <!-- 어느 jsp에 필터를 적용할지 선언 -->
+  <filter-mapping>
+  	<filter-name>Set Character Encoding</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping> 	
+
+
+  <!-- tomcat-users.xml 에 있는 Role을 선언 -->	
+  <security-role>
+  	<description></description>
+  	<role-name>admin</role-name>
+  </security-role>
+  
+  <!-- 사용자의 요청 url에 대한 접근 권한을 설정 -->	
+  <security-constraint>
+  	<display-name>WebMarket Security</display-name>
+  	<!-- 웹 자원에 대한 접근을 설정하는 태그 -->
+  	<web-resource-collection>
+  		<!-- 웹 자원의 이름을 선언 -->
+  		<web-resource-name>WebMarket</web-resource-name>
+  		<!-- 접근 제한을 요청할 URL을 선언 -->
+  		<url-pattern>/addProduct.jsp</url-pattern>
+  		<url-pattern>/editProduct.jsp</url-pattern>
+  		<!-- 전송방식을 선언 -->
+  		<http-method>GET</http-method>
+  	</web-resource-collection>
+  	
+  	<!-- 
+  		컨테이너에게 관련 URL에 대해 인증처리를
+  		주어진 Role에 의해 진행하라는 선언 
+  	-->
+  	<auth-constraint>
+  		<description>권한 관리자명</description>
+  		<role-name>admin</role-name>
+  	</auth-constraint>
+  </security-constraint>
+  
+  <!-- 
+  	로그인 방식 선언
+  	
+  	1.BASIC:로그인 정보를 base64 인코딩 방식으로
+  	  처리하는데 중간에 정보를 훔쳐보는 이즈드롭퍼에
+  	  의해 정보를 뺏길 위험성이 있음
+  	  
+  	  톰캣에서 제공하는 보안화면 폼이 실행된다.
+  	  
+  	2.DIGEST
+  	  :암호화 메커니즘을 통해 좀더 안전 
+  	  
+  	3.CLIENT-CERT:클라이언트가 인증서를 가지고
+  	  공인키 인증방식을 사용하여 로그인 하는 방식
+  	  
+  	4.FORM :개발자가 화면폼을 작성하여 로그인 처리      
+  
+  -->
+  <login-config>
+  	<!-- 보안 로그인 화면을 개발자가 작성 -->
+  	<auth-method>FORM</auth-method>
+  	<form-login-config>
+  		
+  		<!-- 개발자가 작성한 로그인 화면 선언 -->
+  		<form-login-page>/login.jsp</form-login-page>
+  		<!-- 로그인 실패시 이동하는 JSP 선언 -->
+  		<form-error-page>/login_failed.jsp</form-error-page>
+  	</form-login-config>
+  </login-config>
+  
+  <!-- page379 예외 처리 -->
+  <error-page>
+  	<error-code>404</error-code>
+  	<location>/exceptionNoPage.jsp</location>
+  </error-page>
+  
+  <filter>
+  	<filter-name>LogFileFilter</filter-name>
+  	<filter-class>filter.LogFileFilter</filter-class>
+  	<init-param>
+  		<param-name>filename</param-name>
+  		<param-value>c:\\logs\\webmarket.log</param-value>
+  	</init-param>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>LogFileFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <servlet>
+	  <servlet-name>myController</servlet-name>	
+	  <servlet-class>myController.ControllerServlet</servlet-class>
+  </servlet>
+	
+  <servlet-mapping>
+	  <servlet-name>myController</servlet-name>	
+	  <url-pattern>/ControllerServlet</url-pattern>
+  </servlet-mapping>  
+  
+  <servlet>
+	  <servlet-name>BoardController</servlet-name>	
+	  <servlet-class>mvc.controller.BoardController</servlet-class>
+  </servlet>
+	
+  <servlet-mapping>
+	  <servlet-name>BoardController</servlet-name>	
+	  <url-pattern>*.do</url-pattern>
+  </servlet-mapping> 
+  
+</web-app>
+
+
+
+
+
+
+

@@ -1,0 +1,93 @@
+
+프로젝트 생성:day0701
+top.jsp
+content.jsp
+footer.jsp
+layout.jsp
+
+p115 first.jsp
+p116 second.jsp
+
+p144 5번 문제
+include.jsp
+include_data.jsp
+
+
+
+p116 param01.jsp
+p117 param01_data.jsp 코딩
+
+package 명 : beans
+Member 클래스 생성
+private 아이디(id) 문자열
+private 비밀번호(passwd) 문자열
+private 이름(name):문자열
+private 연락처(phone):문자열
+
+
+member.jsp
+form 태그를 이용하여 작성
+p122 
+Calculator.java 클래스 생성
+
+p123
+useBean02.jsp 코딩
+
+
+p144 문제 6번
+beans 패키지에 Gugudan.java 클래스 생성
+
+p124 
+beans 패키지에 Person.java 코딩
+p125 
+useBean03.jsp
+useBean04.jsp
+
+
+p133 WebMarket 프로젝트 에 작성
+
+dto
+Product.java 클래스 생성
+
+
+
+dao
+p137 ProductRepository.java 코딩
+
+
+
+day0701 프로젝트에 생성
+ArrayListExample.jsp 생성
+
+
+p139 WebMarket 프로젝트 에 작성
+products.jsp 코딩
+
+day0701 프로젝트에 코딩
+
+p152
+request01.jsp
+request01_process.jsp
+
+문제)
+1.evenOddSum.jsp
+  첫번째수:xxx
+  두번째수:xxx
+  계산
+  
+2.evenOddResult.jsp
+  짝수합:XXX
+  홀수합:XXX
+  총합계:XXX
+문제)
+Cal.jsp
+-두수와 사칙연산 기호를 입력받는다
+-계산버튼을 클릭하면 CalProcess.jsp로 이동
+
+CalProcess.jsp
+만약 + 를 선택하면  100 + 50 = 150 출력
+만약 - 를 선택하면  100 - 50 = 50 출력
+만약 * 를 선택하면  100 * 50 = 5000 출력
+만약 / 를 선택하면  100 / 50 = 2 출력
+
+p154 request02.jsp 코딩

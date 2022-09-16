@@ -1,0 +1,105 @@
+
+jspStudy > 자료실 > 수정사항
+폴더에 있는 파일을 각 위치에 복사
+
+board 폴더에 있는 jsp -> board 폴더에 복사
+
+BoardController.java는
+mvc.controller 패키지에 복사
+
+BoardDAO.java,BoardDTO.java는
+mvc.model 패키지에 복사
+
+DBConnection.java 는
+mvc.database 패키지에 복사
+
+cart.jsp,menu.jsp 는 webapp 폴더에 복사
+
+
+cartlist
+
+
+
+
+webmarketdb의 board테이블 수정
+
+drop table board;
+
+CREATE TABLE board (
+  num int NOT NULL AUTO_INCREMENT,
+  id varchar(10) NOT NULL,
+  name varchar(10) NOT NULL,
+  subject varchar(100) NOT NULL,
+  content text NOT NULL,
+  hit int DEFAULT NULL,
+  ip varchar(20) DEFAULT NULL,
+  regdate timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (num)
+);
+
+
+/BoardWriteForm.do
+
+
+
+
+DBConnection.java 수정
+
+3306 -> 3307
+
+
+포트폴리오 관련 사항
+- 8월 5일 스토리보드 점검 예정
+- 기본사항
+  회원가입
+  로그인
+  로그아웃
+  관리자 메뉴
+  (쇼핑몰의 경우 상품등록,상품수정,상품삭제)
+  게시판
+  장바구니
+  아이디 중복체크
+
+
+
+
+
+
+구글챠트 예제
+
+1.jspStudy > 자료실 폴더에
+  추가기능.zip 을 import 한다.
+
+2.테스트 테이블을 webmarketdb에 생성
+
+CREATE TABLE employee (
+  id int NOT NULL AUTO_INCREMENT,
+  name varchar(50) DEFAULT NULL,
+  saleqty int NOT NULL,
+  PRIMARY KEY (id)
+); 
+
+insert into employee values (null,'홍길동',1000);
+insert into employee values (null,'이순신',3000);
+insert into employee values (null,'강감찬',2500);
+commit;
+
+3.ChartSample 프로젝트
+  getData.jsp 실행
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

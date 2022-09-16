@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>day0714</display-name>
+  
+ <!-- 한글처리 필터 선언 -->
+ <filter>
+  	<filter-name>Set Character Encoding</filter-name>
+  	<filter-class>
+  		org.apache.catalina.filters.SetCharacterEncodingFilter
+  	</filter-class>
+  	<!-- web.xml에 초기값을 선언 -->
+  	<init-param>
+  		<param-name>encoding</param-name>
+  		<param-value>UTF-8</param-value>
+  	</init-param>
+  </filter>
+  <!-- 어느 jsp에 필터를 적용할지 선언 -->
+  <filter-mapping>
+  	<filter-name>Set Character Encoding</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping> 
+  
+  <filter>
+  	<filter-name>Filter01</filter-name>
+  	<filter-class>filter.AuthenFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>Filter01</filter-name>
+  	<url-pattern>/filter01_process.jsp</url-pattern>
+  </filter-mapping>
+  
+    <filter-mapping>
+  	<filter-name>Set Character Encoding</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping> 
+  
+  <filter>
+  	<filter-name>Filter02</filter-name>
+  	<filter-class>filter.InitParamFilter</filter-class>
+  	<!-- 초기값 설정 -->	
+  	<init-param>
+  		<param-name>param1</param-name>
+  		<param-value>admin</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>param2</param-name>
+  		<param-value>1234</param-value>
+  	</init-param>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>Filter02</filter-name>
+  	<url-pattern>/filter02_process.jsp</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+  	<filter-name>Filter02_2</filter-name>
+  	<filter-class>filter.LogFileFilter</filter-class>
+  	<!-- 초기값 설정 -->	
+  	<init-param>
+  		<param-name>filename</param-name>
+  		<param-value>c:\\logs\\monitor.log</param-value>
+  	</init-param>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>Filter02_2</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+ 
+  <filter>
+  	<filter-name>loginFilter</filter-name>
+  	<filter-class>filterExam.LoginCheckFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>loginFilter</filter-name>
+  	<url-pattern>/loginForm_process.jsp</url-pattern>
+  </filter-mapping>
+</web-app>
+
+
+
+
+
+
+

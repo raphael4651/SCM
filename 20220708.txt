@@ -1,0 +1,111 @@
+
+day0708 프로젝트 생성
+
+p255 validationExample.jsp
+p256 validationExample2.jsp
+
+문제)
+첫번째수: num1
+두번째수: num2
+함수:checkValue
+
+input.jsp
+첫번째수:
+두번째수:
+계산
+
+값을 입력안하면 경고창
+
+inputProcess.jsp
+짝수합:XXX,XXX
+홀수합:XXX,XXX
+총합계:XXX,XXX
+
+p260 validation02.jsp
+p261 validation02_process.jsp 코딩
+
+
+
+p263 10라인부터 20라인까지
+     validation02.jsp에 수정
+
+ASCII 코드표
+
+p271 RegExpExample.jsp
+p273 RegExpExample2.jsp
+
+p274 validation05.jsp
+p276 validation05_process.jsp
+
+p279
+WebMarket 프로젝트 
+webapp > resources 폴더에 js 폴더생성
+
+p279 코딩
+webapp > resources > js 폴더에
+validation.js 파일 생성
+
+
+
+p281 addProduct.jsp 수정
+if(isNaN(unitsInStock.value) ||
+   !unitsInStock.value){
+		alert("[재고수]\n숫자만 입력하세요!");
+		unitsInStock.select();
+		unitsInStock.focus();
+		return false;
+	}
+
+문제) 
+p285 4번 문제
+
+validation01.jsp
+validation01_process.jsp
+
+p293 LocaleExample.jsp 코딩
+
+
+p296 locale01.jsp 코딩
+
+myBundle
+
+file 찾기
+
+영어로 출력하는 파일설정파일
+message_en.properties
+
+한국어로 출력하는 파일설정파일
+message_ko.properties
+
+p306 jstl_fmt01.jsp 코딩
+
+
+message_ko.properties
+title=자바 서버 페이지
+name=홍길동
+
+message_en.properties
+title=Java Server Pages
+name=Hong Gil Dong
+
+
+p325 문제 5번 풀기
+
+properties 파일 한글 깨짐 방지 플러그인 설치
+http://propedit.sourceforge.jp/eclipse/updates/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

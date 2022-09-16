@@ -1,0 +1,178 @@
+
+day0713 프로젝트 생성
+
+day0630 프로젝트의 lib에 있는
+taglib jar 3개를 lib에 복사
+
+패키지명:bundle
+
+파일명
+myBundle_ko.properties
+id=아이디
+password=비밀번호
+button=전송
+
+myBundle_en.properties
+id=id
+password=password
+button=submit
+
+jstl_fmt.jsp
+
+
+
+
+
+p309 jstl_fmt02.jsp 코딩
+
+p313 jstl_fmt03.jsp 코딩
+
+p316 jstl_fmt04.jsp 코딩
+
+세계 타임존 알아보기
+timeZonList.jsp 생성
+
+
+p318 WebMarket 프로젝트 사용
+
+bundle 패키지 생성
+
+message.properties 파일생성
+message_en.properties 파일생성
+
+
+
+
+p319 addProduct.jsp 수정
+day0630 프로젝트의
+lib 폴더에 있는 taglib jar 3개 복사
+
+p330 보안
+
+인증(Authentication)
+:내가 주체가 되어 타 시스템에 정상적인 사용자임을
+ 확인시켜 주는 것
+
+인가(Authorization,권한부여)
+:타시스템에 접근시 타시스템 관리자가 나에게 권한을
+ 부여해주는 것
+
+톰캣서버에서 인증정보가 있는 파일
+
+tomcat-users.xml 파일
+
+d드라이브 apache-tomcat-9.0.64
+conf 폴더에 있음
+
+
+
+day0713 프로젝트
+p340 web.xml 수정
+
+
+
+
+
+p341 security01.jsp 코딩
+
+username:role1
+password:role1234
+
+
+p343 login.jsp 코딩
+     login_failed.jsp 코딩
+
+p345 web.xml 
+
+p346 security02.jsp 코딩
+
+
+
+
+
+
+p348 WebMarket 프로젝트에 적용
+     web.xml 수정
+
+security > Tomcat 9.0 Server at
+localhost > tomcat-users.xml
+
+p349 login.jsp
+p351 login_failed.jsp 코딩
+
+addProduct.jsp 를 실행
+
+
+
+
+p351 logout.jsp 코딩
+p352 addProduct.jsp 수정
+
+
+
+exam0713 프로젝트 생성
+p354 4번
+ROLE 지정:exam
+1) 사용자명:test
+   비밀번호:test1234
+
+web.xml 수정
+
+
+login.jsp 생성
+
+login_failed.jsp 생성
+
+webapp > resources 폴더
+css 폴더에 bootstrap.min.css 파일을 복사
+
+security.jsp 생성
+
+
+3) login_failed.jsp -> 
+   아이디나 비밀번호 확인하세요 
+   글자 파란색으로 경고창
+
+day0713 프로젝트에 코딩
+
+p360 errorPage.jsp
+     errorPage_error.jsp
+
+p361 errorPage_error2.jsp
+
+
+
+
+p363 exception.jsp
+p364 exception_process.jsp 
+     exception_error.jsp
+
+day0713 프로젝트의 web.xml
+
+error500.jsp 생성
+
+divideByZero.jsp 생성
+
+notFound.jsp 생성
+
+error400.jsp 생성
+
+
+
+
+p375 tryCatch.jsp 코딩
+     tryCatch_process.jsp 코딩
+p376 tryCatch_error.jsp
+     tryCatch_error2.jsp
+
+
+
+
+
+
+
+
+
+
+
+

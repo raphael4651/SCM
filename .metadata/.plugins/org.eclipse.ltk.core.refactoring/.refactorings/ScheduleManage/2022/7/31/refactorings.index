@@ -1,0 +1,28 @@
+1658968724666	Move 'taglibs-standard-jstlel-1.2.5.jar' to 'WEB-INF'
+1658968728124	Delete element
+1658968730615	Move 'taglibs-standard-jstlel-1.2.5.jar' to 'lib'
+1658970602853	Move 'logout.jsp' to 'member'
+1658970610330	Move 'logout.jsp' to 'webapp'
+1658970615910	Move file
+1658971606852	Delete element
+1658972838491	Delete element
+1658974509138	Delete element
+1658974512124	Rename resource 'menu2.jsp'
+1658974575587	Move 'logout.jsp' to 'webapp'
+1658974752445	Rename resource 'joinprocess.jsp'
+1658975185766	Rename resource 'login_failed.jsp'
+1658975236945	Delete element
+1658978206021	Delete element
+1658979400426	Delete element
+1658979403532	Rename resource 'loginProcess2.jsp'
+1658984182049	Rename resource 'update.jsp'
+1658984202064	Rename resource 'updateProcess2.jsp'
+1658984255598	Delete element
+1658985349772	Delete element
+1658991463721	Rename resource 'delete.jsp'
+1658992901533	Delete element
+1658995836529	Delete element
+1659052617414	Move 'src' to 'ScheduleManage'
+1659052622151	Delete element
+1659064934568	Copy file
+1659069013780	Copy file

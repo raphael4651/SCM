@@ -1,0 +1,34 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<%@ include file = "dbconn.jsp" %>
+	
+	<%
+		request.setCharacterEncoding("utf-8");
+	
+		PreparedStatement pstmt = null;
+		
+		String sql = "insult into score values(?,?,?,?,?,?,?)";
+		
+		pstmt = conn.prepareStatement(sql);
+		
+		int sno = Integer.parseInt(request.getParameter("sno"));
+		String sname = request.getParameter("sname");
+		int kor = Integer.parseInt(request.getParameter("kor"));
+		int eng = Integer.parseInt(request.getParameter("eng"));
+		int math = Integer.parseInt(request.getParameter("math"));
+		
+		int total = kor + eng + math;
+		double avg = (double)total/3;
+		
+		String grade;
+	%>
+</body>
+</html>

@@ -1,0 +1,110 @@
+
+WebMarket 프로젝트 이용
+
+p378
+exceptionNoProductId.jsp 코딩
+
+p378 product.jsp 수정
+
+p379 에러 테스트
+http://localhost:8080/WebMarket/product.jsp?id=P0000
+
+p379 web.xml 수정
+
+p380 exceptionNoPage.jsp 코딩
+
+products.jsp 실행
+
+http://localhost:8080/WebMarket/Products.jsp
+
+
+day0714 프로젝트 생성
+
+p383 4번 문제
+1.div.jsp
+  첫번째수:XXX
+  두번째수:XXX
+  나누기
+2.나누기 버튼을 클릭하면 divProcess.jsp
+3.divProcess.jsp
+  XXX /XXX = XXX
+4.에러 발생시 errorHandle.jsp 이동
+
+5.책처럼 출력
+
+
+p385 6번 문제 tryCatch.jsp 작성
+
+
+
+
+
+  
+day0714 web.xml
+공통기능 한글처리 필터를 적용
+
+filterExample.jsp
+filterExampleProcess.jsp
+
+filter 패키지 생성
+
+p397 AuthenFilter.java 코딩
+
+
+
+p398 web.xml 수정
+
+p399 filter01.jsp
+     filter01_process.jsp 코딩
+
+p400 filter 패키지에
+InitParamFilter.java 코딩
+
+
+
+p401 web.xml 수정
+
+p403 filter02.jsp
+     filter02_process.jsp
+
+
+p404
+filter패키지에 
+LogFileFilter.java 생성
+
+p406 web.xml 수정
+c드라이브에 logs 폴더 생성
+
+로그파일 생성시 url 추가
+
+p409 WebMarket 프로젝트 사용
+  filter 패키지 생성
+  LogFilter.java 코딩
+
+p411 web.xml 수정
+
+
+
+day0714 프로젝트에 있는
+LogFileFileter.java를 WebMarket
+프로젝트의 filter 패키지에 복사
+
+
+p417 문제4번 day0714 프로젝트 사용
+
+1) filterExam 패키지 생성
+   LoginCheckFilter.java
+2) web.xml 수정
+3) login_success.jsp 
+4) loginForm.jsp
+   loginForm_process.jsp
+
+
+
+
+
+
+
+
+
+

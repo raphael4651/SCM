@@ -1,0 +1,193 @@
+
+WebMarket 프로젝트 사용
+
+p463 cart.jsp 수정
+p463 shippingInfo.jsp 코딩
+
+우편번호 찾기 버튼 추가
+상세주소 추가
+달력 추가
+
+day0706 프로젝트의
+memberjoin.jsp 
+
+
+jspStudy > 자료실 > 달력.txt를
+shippingInfo.jsp에 복사
+
+
+
+p466 processShippingInfo.jsp 코딩
+
+day0714 프로젝트 web.xml에 있는
+한글처리 filter를 WebMarket에 적용하기
+
+
+p467 orderConfirmation.jsp 코딩
+
+p468 53라인,58라인
+p469 63라인
+     col- => col-sm- 
+p469 70라인 도서 -> 상품
+
+
+
+
+p470 thankCustomer.jsp
+p473 checkOutCancelled.jsp 코딩
+
+
+
+
+
+orderConfirmation.jsp 수정
+천단위 콤마 수정
+
+p491 Data Source Explorer
+- 이클립스에서 제공하는 데이터베이스 연결 툴
+
+data source Explorer
+
+
+mysql jar download
+
+https://dev.mysql.com/downloads/connector/j/
+
+database : bookshopping
+jdbc:mysql://localhost:3307/bookshopping
+user name:book
+password:book1234
+
+p506
+
+mysql> use mysql
+
+
+mysql> create database WebMarketDB;
+
+mysql> create user 'shop'@'%' identified by 'shop1234';
+
+mysql> grant all privileges on WebMarketDB.* to 'shop'@'%';
+
+mysql> flush privileges;
+
+connection name:WebMarketDB
+port:3307
+user name:shop
+password:shop1234
+
+
+CREATE TABLE `webmarketdb`.`product` (
+  `p_id` VARCHAR(10) NOT NULL,
+  `p_name` VARCHAR(10) NULL,
+  `p_unitPrice` INT NULL,
+  `p_description` TEXT NULL,
+  `p_category` VARCHAR(20) NULL,
+  `p_manufacturer` VARCHAR(20) NULL,
+  `p_unitsInStock` INT NULL,
+  `p_condition` VARCHAR(20) NULL,
+  `p_fileName` VARCHAR(100) NULL,
+  PRIMARY KEY (`p_id`));
+
+
+
+
+
+day0720 프로젝트 생성
+
+mysql-connector-java-8.0.29.jar 을
+lib 폴더에 복사
+
+p521 connection.jsp 코딩
+
+jdbc:mysql://localhost:3307/WebMarketDB?serverTimezone=Asia/Seoul
+
+상품테이블 생성
+
+CREATE TABLE `product` (
+  `p_id` varchar(10) NOT NULL,
+  `p_name` varchar(10) DEFAULT NULL,
+  `p_unitPrice` int DEFAULT NULL,
+  `p_description` text,
+  `p_category` varchar(20) DEFAULT NULL,
+  `p_manufacturer` varchar(20) DEFAULT NULL,
+  `p_unitsInStock` int DEFAULT NULL,
+  `p_condition` varchar(20) DEFAULT NULL,
+  `p_fileName` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`p_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+p526
+member 테이블 생성
+
+create table member(
+  id varchar(20) not null,
+  passwd varchar(20),
+  name varchar(30),
+  primary key (id)
+);
+
+
+p527 insert01.jsp
+     insert01_process.jsp
+     dbconn.jsp 코딩
+
+
+insert01.jsp를 복사해서 
+insert02.jsp 생성
+
+p533 insert02_process.jsp 코딩
+
+
+
+문제)
+1.테이블생성
+  성적테이블(score)
+  학생번호(sno) 숫자(5) pk
+  학생이름(sname) 문자열(50) not null
+  국어성적(kor) 숫자(3)
+  영어성적(eng) 숫자(3)
+  수학성적(math) 숫자(3)
+  총점(total) 숫자(3)
+  학점(grade) 문자열(1)
+
+2. score.jsp
+
+   학생번호:xxxx
+   학생이름:XXXX
+   국어성적:xxx
+   영어성적:XXX
+   수학성적:XXX
+
+   등록버튼을 클릭하면 값이 입력되었는지 
+   유효성 검사를 한다.
+
+3. score_process.jsp 
+   -PreparedStatement를 사용하여 insert 실행
+   -3과목 평균이 90점 이상이면 A
+         평균이 80점대면 B
+         평균이 70점대면 C
+         평균이 60점대면 D
+         평균이 60점 미만이면 F
+   - 총점도 insert
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,170 @@
+p566 WebMarket 프로젝트 사용
+menu.jsp 수정
+
+p567 editProduct.jsp 수정
+p568 deleteProduct.jsp 코딩
+
+
+p571  문제4번,5번
+day0722 프로젝트 생성
+-web.xml 한글필터 추가
+-database : ExerciseDB
+-사용자:jsp/jsp1234
+
+mysql> create database ExerciseDB;
+
+mysql> create user 'jsp'@'%' identified by 'jsp1234';
+
+mysql> grant all privileges on ExerciseDB.* to 'jsp'@'%';
+
+mysql> flush privileges;
+
+학생테이블 생성
+
+CREATE TABLE student (
+  num VARCHAR(10) NOT NULL,
+  depart VARCHAR(50) NULL,
+  name VARCHAR(50) NULL,
+  address VARCHAR(100) NULL,
+  phone VARCHAR(13) NULL,
+  PRIMARY KEY (num));
+
+
+학생등록 화면 작성
+
+insert.jsp
+insert_process.jsp
+
+
+updateStudent.jsp
+
+변경학생번호:xxxxx
+변경학과명:xxxxxx
+변경주소:xxxxxx
+변경연락처:xxxxxxx
+
+수정 버튼을 클릭하면 updateStudent_process.jsp로 이동
+하여 변경처리한다
+
+정상적으로 변경된 경우 
+
+다음과 같이 경고창을 보여준다.
+
+정상적으로 수정 되었습니다.
+
+
+deleteStudent.jsp
+
+삭제학생번호:xxxxx
+삭제버튼을 클릭하면 deleteStudent_process.jsp로 이동
+
+
+정상적으로 삭제된 경우 
+
+다음과 같이 경고창을 보여준다.
+
+정상적으로 삭제 되었습니다.
+
+
+
+day0722 프로젝트 사용
+
+p580
+
+taglib 3개를 다운로드 사이트
+https://tomcat.apache.org/
+
+taglib 복사 3개를 lib 폴더에 복사
+
+core02.jsp
+core02_process.jsp 코딩
+
+p581 구구단 core03.jsp 코딩
+
+
+ExerciseDB 데이터베이스에 테이블 생성
+
+p582
+member테이블 생성
+
+create table member(
+  id varchar(20) not null,
+  passwd varchar(20),
+  name varchar(30),	
+  primary key(id)
+);
+
+insert into member values('1','1234','홍길순');
+insert into member values('2','1235','홍길동');
+commit;
+
+p583 sql01.jsp 코딩
+
+p585 sql02.jsp
+     sql02_process.jsp 코딩
+
+p586 sql03.jsp
+     sql03_process.jsp 코딩
+
+p588 sql04.jsp
+     sql04_process.jsp 코딩
+
+
+
+
+p589 functions01.jsp
+     functions02.jsp 코딩
+
+
+
+
+
+p593
+WebMarketDB에 member 테이블 생성
+
+jspStudy > 자료실> menu.jsp 복사
+
+p598 문제 6번 화면
+
+member 테이블 수정
+
+phone  varchar(20) 
+postCd varchar(5)
+address varchar(100)
+addres2 varchar(100)
+regDate datetime
+
+now()
+
+
+webapp 폴더에 member 폴더생성
+addMember.jsp
+processAddMember.jsp
+
+생일은 달력(datepicker)
+이메일은 dropdown 생략
+주소는 
+우편번호추가
+상세주소추가
+
+
+
+훈련장려금 한시적 인상
+8월 1일 - 12월 31일
+월 20만으로 상향
+
+7월 31일 까지는 1일 5,800원
+8월 1일 부터 10,000원으로 계산 됩니다.
+
+
+
+
+
+
+
+
+
+
+
+
+

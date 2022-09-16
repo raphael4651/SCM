@@ -1,0 +1,109 @@
+
+day0721 프로젝트 생성
+p537 select01.jsp 코딩
+
+day0720 프로젝트의 dbconn.jsp를
+day0721 복사
+
+
+mysql-connector-java-8.0.29.jar 파일을
+lib 폴더에 복사
+문제)
+
+파일명:scoreList.jsp
+
+score테이블을 사용
+출력시 학생이름순으로 출력
+
+day0720 프로젝트의 score.jsp를 이용하여 
+데이터 추가
+
+5000  이순신 70 60 90
+4000  강감찬 50 63 72
+6000  신사임당 90 80 76
+1500  허준 85 77 30
+
+
+           학생성적 리스트
+학생번호 학생이름 국어 영어 수학 총점 학점
+
+
+p543
+update02.jsp
+출력결과를 보고 작성
+update02_process.jsp 코딩
+
+문제)
+
+score 테이블 사용
+
+updateScore.jsp
+
+변경할학생번호:XXX
+변경국어성적:XXX
+변경영어성적:XXX
+변경수학성적:XXX
+
+수정 버튼 클릭
+
+updateScore_process.jsp
+- 총점과 학점을 변경하도록 처리
+
+
+p548 delete02.jsp 
+     화면을 보고 코딩
+     delete02_process.jsp 코딩
+
+문제)
+
+score테이블 사용
+
+deleteScore.jsp
+삭제학생번호:XXXX
+삭제 버튼 클릭하면 
+
+deleteScore_process.jsp
+
+
+
+WebMarket 프로젝트 사용
+
+p552 dbconn.jsp 코딩
+p553 menu.jsp 수정
+
+p554 products.jsp 수정
+
+
+
+p555 menu.jsp 수정
+
+
+
+mysql-connector-java-8.0.29.jar 파일을
+lib 폴더에 복사
+
+p556 processAddProduct.jsp 수정
+
+addProduct.jsp
+
+p557 menu.jsp 수정
+
+p558 editProduct.jsp 코딩
+http://localhost:8080/WebMarket/editProduct.jsp?edit=update
+
+p560 updateProduct.jsp 코딩
+
+product.jsp 수정
+
+
+addCart.jsp 수정
+
+removeCart.jsp 수정
+
+
+
+p563 processUpdateProduct.jsp 코딩
+
+자료실 > 상태코드수정.txt 복사
+
+updateProduct.jsp

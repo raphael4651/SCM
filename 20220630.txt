@@ -1,0 +1,112 @@
+p80
+session
+day0630
+session01.jsp
+
+jsp 사용하는 포트 :8080 
+포트가 사용중이다 오류 나는 경우 해결
+
+c:>netstat -nao | find 8080
+
+c:>taskkill /f /pid 프로세스번호
+
+session02.jsp
+
+p81 buffer
+bufferExample.jsp
+
+p85
+page_errorPage.jsp
+page_errorPage_error.jsp
+
+문제)
+errorExample.jsp
+- 변수 a=10,b=0,c=a/b
+  변수 c 출력
+- 오류발생시 error2Example.jsp로 이동
+
+error2Example.jsp
+- 분모는 0으로 나눌 수 없습니다!
+
+
+p92 include01.jsp
+p93 include01_header.jsp
+   
+문제)
+header.jsp
+휴대폰쇼핑몰      로그인  회원가입
+-------------------------------
+body.jsp
+SK휴대폰
+LG휴대폰
+KT휴대폰
+알뜰폰
+
+footer.jsp
+-address 태그를 사용
+----------------------------------
+copyright 한국 휴대폰 대리점 Tel)
+010-1111-2222
+
+p95 taglib
+taglib를 사용하기 위해 jar 다운로드
+https://tomcat.apache.org/
+
+TagLibs
+
+다운받은 3개 jar파일을
+webapp > WEB-INF > lib에 복사
+
+
+p96 taglib.jsp 코딩
+
+ jstl01.jsp 생성
+
+ ojdbc6.jar를 
+ webapp > WEB-INF > lib에 복사
+
+
+프로젝트명: WebMarket
+
+day0624 프로젝트의 
+welcome.jsp를 webapp에 복사
+
+
+p99
+menu.jsp 코딩
+
+p100 foorter.jsp 코딩
+<%-- 하단 css 설정 --%>
+<footer class="container">
+   <p>&copy;WebMarket</p>
+</footer>
+
+p103 6번 코딩
+day0630 프로젝트에 코딩하세요
+taglibexample2.jsp
+
+문제) taglib 문제
+
+- 파일명:evenOddSum.jsp
+- <c:forEach>,<c:set>,<c:if>를 사용하여
+ 1부터 100까지 숫자에 대해
+
+ 짝수합:XXX,XXX
+ 홀수합:XXX,XXX
+ 총합계:XXX,XXX
+
+p106 Action Tag
+day0630 프로젝트 
+forward.jsp
+view.jsp
+
+a.jsp
+b.jsp
+c.jsp
+
+p109 forward2.jsp 코딩
+p110 forward_date.jsp 코딩
+http://localhost:8080/day0630/forward2.jsp
+
+p112 first.jsp
+     second.jsp 코딩

@@ -1,0 +1,293 @@
+
+p595
+WebMarket 프로젝트 사용
+회원가입
+member 폴더에 addMember.jsp 작성
+
+자료실에 addMember.jsp 복사
+
+p595 member 폴더에 
+     processAddMember.jsp 코딩
+
+jstl을 이용하여 데이터베이스 접속
+
+webapp 폴더에 dbconn2.jsp 생성
+
+
+
+
+CREATE TABLE `member` (
+  `id` varchar(20) NOT NULL,
+  `passwd` varchar(20) DEFAULT NULL,
+  `name` varchar(30) DEFAULT NULL,
+  `gender` varchar(4) DEFAULT NULL,
+  `birth` varchar(10) DEFAULT NULL,
+  `mail` varchar(30) DEFAULT NULL,
+  `phone` varchar(20) DEFAULT NULL,
+  `postCd` varchar(5) DEFAULT NULL,
+  `address` varchar(100) DEFAULT NULL,
+  `address2` varchar(100) DEFAULT NULL,
+  `regDate` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+p595 
+member 폴더에 작성
+resultMember.jsp
+
+js 폴더 밑에 있는 
+validation.js 수정
+
+var id = newMember.id.value;
+var name = newMember.name.value;
+var passwd1 = newMember.password.value;
+var passwd2 = newMember.password_confirm.value;
+var gender = newMember.gender.value;
+var birthday = newMember.birthday.value;
+var mail = newMember.mail.value;
+var phone = newMember.phone.value;
+var postCd = newMember.postCd.value;
+var address = newMember.address.value;
+var address2 = newMember.address2.value;
+
+if(!id){ 
+   alert("아이디를 입력하세요");
+   newMember.id.select();
+   newMember.id.focus();
+   return false;	 
+}
+
+if(!name){ 
+   alert("이름을 입력하세요");
+   newMember.name.select();
+   newMember.name.focus();
+   return false;	 
+}
+
+if(!passwd1){ 
+   alert("비밀번호를 입력하세요");
+   newMember.passwd1.select();
+   newMember.passwd1.focus();
+   return false;	 
+}
+
+if(!passwd2){ 
+   alert("비밀번호 확인을 입력하세요");
+   newMember.passwd1.select();
+   newMember.passwd1.focus();
+   return false;	 
+}
+
+if(passwd1 != passwd2){ 
+   alert("비밀번호가 틀립니다 확인하세요");
+   newMember.passwd1.select();
+   newMember.passwd1.focus();
+   return false;	 
+}
+
+if(!gender){ 
+   alert("성별을 입력하세요");
+   newMember.gender.select();
+   newMember.gender.focus();
+   return false;	 
+}
+
+
+if(!birthday){ 
+   alert("생일을 선택하세요");
+   newMember.birthday.select();
+   newMember.birthday.focus();
+   return false;	 
+}
+
+if(!phone){ 
+   alert("연락처를 입력 하세요");
+   newMember.phone.select();
+   newMember.phone.focus();
+   return false;	 
+}
+
+if(!postCd){ 
+   alert("우편번호를 선택 하세요");
+   newMember.postCd.select();
+   newMember.postCd.focus();
+   return false;	 
+}
+
+if(!address){ 
+   alert("우편번호를 선택 하세요");
+   newMember.address.select();
+   newMember.address.focus();
+   return false;	 
+}
+
+if(!address2){ 
+   alert("우편번호를 선택 하세요");
+   newMember.address2.select();
+   newMember.address2.focus();
+   return false;	 
+}
+
+
+document.newMember.submit();
+
+
+
+
+
+
+p595
+
+p599 출력화면 참고
+member 폴더에
+updateMember.jsp
+addMember.jsp 내용을 그대로 복사
+
+
+
+
+p595
+member 폴더에 생성
+processUpdateMember.jsp
+
+p595
+member폴더에
+deleteMember.jsp 생성
+
+
+
+p595
+member폴더에
+loginMember.jsp ->page598 화면 참고
+
+processLoginMember.jsp
+
+
+logoutMember.jsp
+
+
+products.jsp 실행
+
+updateMember.jsp
+
+
+
+
+products.jsp 수정
+
+welcome.jsp 수정
+
+product.jsp 수정
+
+cart.jsp 수정
+
+
+자료실 > 장바구니 폴더에
+removeCart.jsp
+addCart.jsp
+cart.jsp
+cartUpdate.jsp 4개파일은 webapp에 복사
+
+Cart.java 파일은 dao 패키지에 복사
+
+https://fontawesome.com/icons
+
+
+
+
+패키지명: myController
+
+p612 코딩
+class명:ControllerServlet.java
+
+p611
+WebMarket
+src/main/java에 model패키지 생성
+LoginBean.java 클래스 코딩
+
+p610
+WebMarket 프로젝트의 web.xml 수정
+
+
+자료실에 서블릿 동작순서.hwp 복사
+
+webapp 폴더에 코딩
+p613 mvc.jsp
+     mvc_success.jsp
+p614 mvc_error.jsp 
+
+
+
+
+
+
+
+
+
+
+p610 web.xml 수정
+<servlet>
+  <servlet-name>myController</servlet-name>	
+  <servlet-class>mycontroller.ControllerServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+  <servlet-name>myController</servlet-name>	
+  <url-pattern>/ControllerServlet</url-pattern>
+</servlet-mapping>
+
+mvc.jsp
+
+webmarketdb에 board 테이블 생성
+
+create table board(
+  num int not null auto_increment,
+  id varchar(10) not null,
+  name varchar(10) not null,
+  subject varchar(100) not null,
+  content text not null,
+  regdate date,
+  hit int,
+  ip varchar(20),
+  primary key(num)
+);
+
+
+
+
+p616 web.xml 수정
+
+패키지명:mvc.controller
+
+패키지명:mvc.database
+p617 DBConnection.java 코딩
+
+p618 
+패키지명:mvc.model
+BoardDTO.java 코딩
+
+
+자료실에
+
+board 폴더를 webapp밑에 복사
+
+BoardController.java 를 
+mvc.controller 패키지에 복사
+
+BoardDAO.java를 
+mvc.model 패키지에 복사
+
+
+list.jsp - 게시판 리스트
+view.jsp - 게시판 상세보기
+writeForm.jsp - 게시판 등록
+
+
+
+
+
+
+
+
+

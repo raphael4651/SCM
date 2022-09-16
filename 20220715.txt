@@ -1,0 +1,94 @@
+
+day0715 프로젝트 생성
+
+p422 session01.jsp
+p423 session01_process.jsp 코딩
+
+p426 session02.jsp
+
+p427 session03.jsp
+
+p430 session04.jsp
+
+p432 session06.jsp
+
+
+session01.jsp 실행
+
+
+
+p435 session07.jsp
+
+p448 4번 문제
+
+session.jsp
+session_process.jsp
+welcome.jsp
+session_out.jsp
+
+만약에 id가 admin이 아니거나 
+비밀번호가 admin1234가 아니면
+아이디나 비밀번호를 확인하세요 경고창을 보여주고
+session.jsp로 이동하도록 처리
+
+
+
+장바구니 구현
+WebMarket 프로젝트 사용
+
+p438 Product.java 수정
+
+p439 product.jsp 수정
+
+p440 addCart.jsp 코딩
+
+~ 7월 27일 : JSP 마무리
+7월 28일 : 서버 구현 평가
+7월 29일 : 통합 구현 평가
+
+8월 3일 - 8월 5일 : 간단한 프로젝트 진행
+
+p442 cart.jsp 코딩
+
+
+p444 removeCart.jsp
+p446 deleteCart.jsp 코딩
+
+
+
+
+수정사항
+1.금액에 천단위 콤마
+2.금액 우측정렬
+3.주문하기 버튼을 클릭시 장바구니에
+  내역이 하나도 없으면 
+  장바구니에 내역이 없습니다. 경고창을 표시하고
+  장바구니 화면으로 이동처리
+
+
+day0715 프로젝트에 코딩
+p456 cookie01.jsp
+     cookie01_process.jsp
+
+p459 cookie02.jsp
+p460 cookie03.jsp
+
+
+
+p475 문제 3번
+cookie.jsp
+cookie_process.jsp
+- 아이디가 admin 비밀번호가 admin1234 일때만
+  쿠키생성 
+  아이디나 비밀번호를 확인하세요 경고창을 출력하고
+  cookie.jsp로 이동
+- 쿠키 유효시간:3시간
+cookiewelcome.jsp
+cookie_out.jsp
+
+
+
+
+
+
+
